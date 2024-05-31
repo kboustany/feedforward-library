@@ -22,7 +22,7 @@ class Optimizer:
             next.error = error(current.error, current.weight, derivative)
         layers[0].gradient += gradient(x, y, layers[0].error)
 
-    def _update(self, layers, size):
+    def _update(self, layers, size, epoch):
         """ Updates the weights of the network during gradient descent. """
 
         for layer in layers:
